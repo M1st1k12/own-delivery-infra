@@ -61,8 +61,9 @@ docker compose \
 
 Контейнер готовий коли побачиш у логах:
 ```
-own-delivery-backend | Application started.
-own-delivery-backend | Now listening on: http://localhost:5134
+own-delivery-backend | dotnet watch 🚀 Started
+own-delivery-backend |       Now listening on: http://[::]:8080
+own-delivery-backend |       Application started. Press Ctrl+C to shut down.
 ```
 
 Swagger: [http://localhost:8095/swagger](http://localhost:8095/swagger)
@@ -117,7 +118,7 @@ npm run dev  →  Vite :5190
 
 | Що змінюєш | Що робити |
 |-----------|-----------|
-| Код бекенду (`.cs`) | `dotnet watch` всередині контейнера підхоплює автоматично |
+| Код бекенду (`.cs`) | `dotnet watch` підхоплює автоматично; при структурних змінах (сигнатури, enum) — авто-перезапуск без підтвердження |
 | Код фронтенду (`.vue`, `.ts`) | Vite HMR підхоплює автоматично |
 | `docker-compose.*.yml` | Зупинити та перезапустити `docker compose up` |
 | Нова EF-міграція | Перезапустити контейнер бекенду — `dotnet ef database update` виконується при старті |
