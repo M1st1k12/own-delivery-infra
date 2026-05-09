@@ -13,6 +13,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:8080
       NUGET_PACKAGES: /nuget
+      DOTNET_WATCH_RESTART_ON_RUDE_EDIT: "true"
     volumes:
       - ../../own-delivery-backend/src:/src
       - ../volumes/nuget:/nuget
